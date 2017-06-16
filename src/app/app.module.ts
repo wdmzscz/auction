@@ -10,6 +10,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { StockManagerComponent } from './stock/stock-manager/stock-manager.component';
+import { StarsComponent } from './stars/stars.component';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { StockManagerComponent } from './stock/stock-manager/stock-manager.compo
     SidebarComponent,
     FooterComponent,
     ContentComponent,
-    StockManagerComponent
+    StockManagerComponent,
+    StarsComponent,
+    HomeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
