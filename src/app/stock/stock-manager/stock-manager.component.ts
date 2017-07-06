@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-stock-manager',
@@ -10,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class StockManagerComponent implements OnInit {
 
   private stocks : Array<Stock>;
-  constructor(
-) {}
+  constructor(public router:Router) {
+
+  }
 
   ngOnInit() {
     this.stocks = [
@@ -20,6 +22,14 @@ export class StockManagerComponent implements OnInit {
       new Stock(3,"nike",2.99,3.5,"这是第三只股票",["it","互联网"]),
       new Stock(4,"apple",2.99,3.5,"这是第四只股票",["it","互联网"])
     ];
+  }
+
+  create () {
+    this.router.navigateByUrl('/stock/0');
+  }
+
+  update (stock:Stock) {
+    this.router.navigateByUrl('/stock/' + stock.id);
   }
 
 }

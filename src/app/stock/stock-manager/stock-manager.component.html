@@ -2,7 +2,7 @@
     <div class="col-md-12">
       <div class="box">
         <div class="box-header with-border">
-          <a  class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>create</a>
+          <a  class="btn btn-success"><span class="glyphicon glyphicon-plus" (click)="create()"></span>create</a>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -20,7 +20,7 @@
               <td>{{stock.price}}</td>
               <td><app-stars [rating]="stock.rating"></app-stars></td>
               <td>
-                <a class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span>edit</a>
+                <a class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil" (click)="update(stock)"></span>edit</a>
                 <a class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span>delete</a>
               </td>
             </tr>
